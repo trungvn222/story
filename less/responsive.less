@@ -1,0 +1,55 @@
+@-ms-viewport { width: device-width; }
+@media (max-width: 1280px){
+	.centerized { padding-left: 30px; padding-right: 30px; }
+}
+@media ( max-width : 991px ){
+	#header { position: relative; }
+	.main-content {
+		.content-container { padding-left: 0px; }
+	}
+	.has-sidebar-left { padding-left: 0px; 
+		.left-sidebar { width: 100%; float: none; margin-left: 0px; margin-bottom: 20px; }
+	}
+	.has-sidebar-right { padding-right: 0px; margin-right: 0px; }
+
+	/*
+		Nav Main
+	*/
+	#nav-main { width: 100%; top: 100%; .transform(translateY(0)); background: @cl-green; display: none; padding: 15px 30px;
+		> ul {
+			> li { width: 100%; margin-left: 0px; 
+				> a { .rounded(0); }
+			}
+		}
+		li {
+			ul { position: static; width: 100%; .rounded(0); border: 0px; display: block; 
+				li {
+					&:first-child { 
+						>a { .rounded(0); }
+					} 
+					&:last-child {
+						>a { .rounded(0); }
+					}
+					ul { left: 100%; top: 0px; margin-left: 0px; 
+						&.right { margin-right: 0px; }
+					}
+				}
+			}
+		}
+	}
+}
+@media ( max-width : 767px ){
+	/*
+		Style TabAccordionResponsive
+	*/
+	.block-tab.tab { overflow: hidden;
+		&.bp-lt768 {
+			.tab-menu { display: none; }
+			.r-tabs-accordion-title { display: block; }
+		}
+	}
+}
+
+@media ( max-width : 480px ){
+	.alignnone, .alignleft, .aligncenter, .alignright { float: none; margin: 0 0 1em 0; width: 100%; }
+}
